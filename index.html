@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test job idalite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <main class="added-product">
-        <h1 class="added-product__title">Добавление товара</h1>
+    <main class="added-product">
+     <div class="container">
+          <div class="added-product__wrapper">
+            <h1 class="added-product__title">Добавление товара</h1>
 
         <ul class="added-product__sorting">
-          <li class="added-product__sorting_item">По умолчанию</li>
+          <li class="added-product__sorting_item added-product__sorting_item_visible">По умолчанию</li>
 
           <li class="added-product__sorting_item">По цене min</li>
 
@@ -21,6 +25,7 @@
           <li class="added-product__sorting_item">По наименованию</li>
         </ul>
         <!-- /.added-product__sorting -->
+          </div>
 
         <div class="add-board">
           <div class="add-board__part">
@@ -29,7 +34,7 @@
           </div>
           <div class="add-board__part">
             <span class="add-board__name">Описание товара</span>
-            <input class="add-board__field" placeholder="Введите описание товара"></input>
+            <textarea class="add-board__field add-board__field_area" placeholder="Введите описание товара" ></textarea>
           </div>
           <div class="add-board__part">
             <span class="add-board__name">Ссылка на изображение товара</span>
@@ -41,8 +46,10 @@
           </div>
           <button class="add-board__button">Добавить товар</button>
         </div>
+        <div class="cards-grid">
+        </div>
+     </div>
       </main>
       <!-- /.added-product -->
-    </div>
   </body>
 </html>

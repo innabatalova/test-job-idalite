@@ -1,0 +1,44 @@
+.added-product
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__title
+    font-weight: 600
+    font-size: 28px
+    line-height: 35px
+    color: #3F3F3F
+
+  &__sorting
+    position: relative
+    display: flex
+    align-items: center
+    width: 122px
+    padding: 10px 16px
+    list-style: none
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: #B4B4B4
+    cursor: pointer
+    background: #FFFEFB
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+    border-radius: 4px
+
+    &::after
+      position: absolute
+      right: 12px
+      transform: rotate(45deg)
+      content: ""
+      width: 5px
+      height: 5px
+      border-bottom: 1px solid #B4B4B4
+      border-right: 1px solid #B4B4B4
+
+    &_item
+      display: none
+
+      &_visible
+        display: block
