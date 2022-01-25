@@ -1,0 +1,60 @@
+.cards-grid
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 74.5%
+
+.card
+  position: relative
+  display: flex
+  flex-direction: column
+  width: 32%
+  max-width: 332px
+  min-height: 420px
+  padding-bottom: 24px
+  margin-bottom: 16px
+  color: #3F3F3F
+  background: #FFFEFB
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02)
+  border-radius: 4px
+
+  &__image
+    background-size: cover
+    height: 200px
+
+  &__content
+    padding: 0 16px
+
+  &__title
+    font-weight: 600
+    font-size: 20px
+    line-height: 25px
+    margin-top: 16px
+    margin-bottom: 16px
+
+  &__info
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 32px
+
+  &__price
+    font-weight: 600
+    font-size: 24px
+    line-height: 30px
+
+  &__basket
+    position: absolute
+    display: none
+    right: -8px
+    top: -8px
+    align-items: center
+    justify-content: center
+    width: 32px
+    height: 32px
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    background-color: #FF8484
+
+    &_visible
+      display: flex
