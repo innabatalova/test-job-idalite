@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: calc( 100% - 64px);
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
