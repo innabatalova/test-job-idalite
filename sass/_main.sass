@@ -20,6 +20,7 @@
     width: 122px
     max-height: 36px
     padding: 10px 16px
+    margin-top: 16px
     list-style: none
     font-weight: normal
     font-size: 12px
@@ -48,3 +49,21 @@
 
       &_visible
         display: block
+
+@media screen and ( max-width: 768px )
+  .added-product
+
+    &__wrapper
+
+      &_cards
+        flex-direction: column
+
+@media screen and ( max-width: 576px )
+  .added-product
+
+    &__wrapper
+      justify-content: center
+
+    &__sorting
+      position: absolute
+      top: 35%

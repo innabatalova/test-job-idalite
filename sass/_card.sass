@@ -87,3 +87,47 @@
 
   100%
     transform: translateX(0)
+
+@media screen and ( max-width: 1200px )
+  .cards-grid
+    justify-content: space-around
+    padding-top: 5px
+
+  .card
+    width: 100%
+    max-width: 332px
+    margin-right: 6px
+
+@media screen and ( max-width: 992px )
+  .cards-grid
+    width: 50%
+
+  .card
+    max-width: 100%
+    min-height: 220px
+
+    &__title
+      font-weight: 600
+      font-size: 13px
+      line-height: 18px
+      margin-top: 16px
+      margin-bottom: 16px
+
+    &__info
+      font-weight: normal
+      font-size: 11px
+      line-height: 15px
+      margin-bottom: 32px
+
+    &__price
+      font-weight: 600
+      font-size: 18px
+      line-height: 20px
+
+@media screen and ( max-width: 768px )
+  .cards-grid
+    width: 100%
+
+  .card
+    max-width: 100%
+    margin-top: 15px

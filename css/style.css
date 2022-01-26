@@ -18,6 +18,12 @@ a, button {
   margin: auto;
 }
 
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
 .added-product__wrapper {
   display: flex;
   justify-content: space-between;
@@ -41,6 +47,7 @@ a, button {
   width: 122px;
   max-height: 36px;
   padding: 10px 16px;
+  margin-top: 16px;
   list-style: none;
   font-weight: normal;
   font-size: 12px;
@@ -73,6 +80,22 @@ a, button {
 
 .added-product__sorting_item_visible {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .added-product__wrapper_cards {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .added-product__wrapper {
+    justify-content: center;
+  }
+  .added-product__sorting {
+    position: absolute;
+    top: 35%;
+  }
 }
 
 .add-board {
@@ -130,7 +153,9 @@ a, button {
 }
 
 .add-board__button {
-  padding: 10px 96px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   font-weight: 600;
   font-size: 12px;
@@ -141,6 +166,21 @@ a, button {
   background: #EEEEEE;
   border-radius: 10px;
   border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .add-board {
+    width: 50%;
+    margin-right: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .add-board {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .cards-grid {
@@ -243,6 +283,56 @@ a, button {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-grid {
+    justify-content: space-around;
+    padding-top: 5px;
+  }
+  .card {
+    width: 100%;
+    max-width: 332px;
+    margin-right: 6px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cards-grid {
+    width: 50%;
+  }
+  .card {
+    max-width: 100%;
+    min-height: 220px;
+  }
+  .card__title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .card__info {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 32px;
+  }
+  .card__price {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards-grid {
+    width: 100%;
+  }
+  .card {
+    max-width: 100%;
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
