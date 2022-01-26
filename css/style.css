@@ -52,6 +52,10 @@ a, button {
   border-radius: 4px;
 }
 
+.added-product__sorting:hover {
+  color: #948383;
+}
+
 .added-product__sorting::after {
   position: absolute;
   right: 12px;
@@ -112,6 +116,15 @@ a, button {
   color: #B4B4B4;
 }
 
+.add-board__field:hover {
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-board__field:focus {
+  border: 1px solid #afafba;
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.1);
+}
+
 .add-board__field_area {
   height: 108px;
 }
@@ -150,6 +163,13 @@ a, button {
   background: #FFFEFB;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.card:hover, .card:focus {
+  box-shadow: 10px 30px 40px rgba(0, 0, 0, 0.04);
+  transform: scale(1.03);
+  transition: all 0.3s ease-out;
 }
 
 .card__image {
@@ -198,5 +218,31 @@ a, button {
 
 .card__basket_visible {
   display: flex;
+}
+
+.card__basket:hover, .card__basket:focus {
+  animation: swing 0.6s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes swing {
+  15% {
+    transform: translateX(3px);
+  }
+  30% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  65% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
