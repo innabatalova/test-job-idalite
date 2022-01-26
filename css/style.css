@@ -114,12 +114,23 @@ a, button {
 }
 
 .add-board__name {
+  position: relative;
   margin-bottom: 4px;
   font-weight: normal;
   font-size: 10px;
   line-height: 13px;
   letter-spacing: -0.02em;
   color: #49485E;
+}
+
+.add-board__name_val::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: #FF8484;
+  border-radius: 4px;
 }
 
 .add-board__field {
@@ -132,7 +143,6 @@ a, button {
 }
 
 .add-board__field::placeholder {
-  vertical-align: top;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
