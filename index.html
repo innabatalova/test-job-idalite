@@ -70,12 +70,13 @@
                 >Цена товара</span
               >
               <input
-                class="add-board__field add-val"
+                class="add-board__field add-val add-board__number"
                 placeholder="Введите цену"
-                type="number"
+                minlength="1"
+                maxlength="6"
               />
             </div>
-            <button class="add-board__button">Добавить товар</button>
+            <button class="add-board__button" disabled>Добавить товар</button>
           </form>
           <div class="cards-grid">
             <div class="card">
