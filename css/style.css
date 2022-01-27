@@ -9,6 +9,10 @@ input, textarea {
   border: none;
 }
 
+textarea {
+  resize: none;
+}
+
 a, button {
   cursor: pointer;
 }
@@ -16,6 +20,21 @@ a, button {
 .container {
   max-width: calc( 100% - 7em);
   margin: auto;
+}
+
+.error {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #FF8484;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: -0.02em;
+}
+
+.add-inval {
+  border: 1px solid #FF8484;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 576px) {
@@ -74,11 +93,11 @@ a, button {
   border-right: 1px solid #B4B4B4;
 }
 
-.added-product__sorting_item {
+.added-product__sorting__item {
   display: none;
 }
 
-.added-product__sorting_item_visible {
+.added-product__sorting__item__visible {
   display: block;
 }
 
@@ -109,6 +128,7 @@ a, button {
 }
 
 .add-board__part {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -133,32 +153,31 @@ a, button {
   border-radius: 4px;
 }
 
-.add-board__field {
+.add-board__field, .add-board__area {
   margin-bottom: 16px;
   background: #FFFEFB;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 10px 16px;
-  resize: none;
 }
 
-.add-board__field::placeholder {
+.add-board__field::placeholder, .add-board__area::placeholder {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
   color: #B4B4B4;
 }
 
-.add-board__field:hover {
+.add-board__field:hover, .add-board__area:hover {
   box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.1);
 }
 
-.add-board__field:focus {
+.add-board__field:focus, .add-board__area:focus {
   border: 1px solid #afafba;
   box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.1);
 }
 
-.add-board__field_area {
+.add-board__area {
   height: 108px;
 }
 
@@ -176,6 +195,12 @@ a, button {
   background: #EEEEEE;
   border-radius: 10px;
   border: none;
+}
+
+.add-board__button_create {
+  background: #7BAE73;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 1200px) {
