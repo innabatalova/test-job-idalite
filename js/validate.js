@@ -20,33 +20,41 @@ const validate = () => {
         let error = document.createElement("div");
         error.className = "error";
         error.innerHTML = "Поле является обязательным";
-        item.parentElement.insertBefore(error, item);
+        item.parentElement.append(error, item);
       } else if (item.value.length < 6 && item.type == "text") {
         item.classList.add("add-inval");
         addBoardButton.classList.remove("add-board__button_create");
         let error = document.createElement("div");
         error.className = "error";
         error.innerHTML = "Мин количество символов: 6";
-        item.parentElement.insertBefore(error, item);
-      } else if (item.value.length > 50 && item.type == "text") {
+        item.parentElement.append(error, item);
+      } else if (item.value.length > 100 && item.type == "text") {
         item.classList.add("add-inval");
         addBoardButton.classList.remove("add-board__button_create");
         let error = document.createElement("div");
         error.className = "error";
-        error.innerHTML = "Макс количество символов: 50";
-        item.parentElement.insertBefore(error, item);
+        error.innerHTML = "Макс количество символов: 100";
+        item.parentElement.append(error, item);
       } else if (!item.value.replace(/[\s]+/g, "")) {
         item.classList.add("add-inval");
         addBoardButton.classList.remove("add-board__button_create");
         let error = document.createElement("div");
         error.className = "error";
         error.innerHTML = "Введите корректное значение";
-        item.parentElement.insertBefore(error, item);
+        item.parentElement.append(error, item);
       } else {
         addBoardButton.classList.add("add-board__button_create");
         addBoardButton.disabled = false;
       }
     });
+
+    if (!addBoardNumber.value) {
+      addBoardNumber.classList.add("add-inval");
+      let error = document.createElement("div");
+      error.className = "error";
+      error.innerHTML = "Поле является обязательным";
+      addBoardNumber.parentElement.append(error, addBoardNumber);
+    }
   };
 
   //обновление списка ошибок при новой попытке отправки
@@ -64,12 +72,10 @@ const validate = () => {
   };
 
   //маска разделения тысячных пробелом для поля цены
-  addBoardNumber.addEventListener("keypress", () => {
-    console.log(addBoardNumber);
+  addBoardNumber.addEventListener("keyup", () => {
     if (addBoardNumber.value.length > 2) {
-      var str = addBoardNumber.value;
+      let str = addBoardNumber.value;
       let newStr = str.replace(/(\d\d)(?=(\d\d)+([^\d]|$))/g, "$1 ");
-      console.log(newStr);
       addBoardNumber.value = newStr;
     }
   });

@@ -62,6 +62,7 @@ a, button {
 .added-product__sorting {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 122px;
   max-height: 36px;
@@ -76,6 +77,7 @@ a, button {
   background: #FFFEFB;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  z-index: 99;
 }
 
 .added-product__sorting:hover {
@@ -85,6 +87,7 @@ a, button {
 .added-product__sorting::after {
   position: absolute;
   right: 12px;
+  bottom: 12px;
   transform: rotate(45deg);
   content: "";
   width: 5px;
@@ -98,7 +101,19 @@ a, button {
 }
 
 .added-product__sorting__item__visible {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 122px;
+  min-height: 25px;
+  margin-bottom: 1px;
+  color: #B4B4B4;
+  background-color: #FFFEFB;
+  border-radius: 4px;
+}
+
+.added-product__sorting__item__visible:hover {
+  color: #948383;
 }
 
 @media screen and (max-width: 768px) {
@@ -280,7 +295,7 @@ a, button {
 
 .card__basket {
   position: absolute;
-  display: none;
+  display: flex;
   right: -8px;
   top: -8px;
   align-items: center;
@@ -290,10 +305,6 @@ a, button {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #FF8484;
-}
-
-.card__basket_visible {
-  display: flex;
 }
 
 .card__basket:hover, .card__basket:focus {
