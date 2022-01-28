@@ -87,7 +87,7 @@ a, button {
 .added-product__sorting::after {
   position: absolute;
   right: 12px;
-  bottom: 12px;
+  bottom: 15px;
   transform: rotate(45deg);
   content: "";
   width: 5px;
@@ -105,8 +105,9 @@ a, button {
   align-items: center;
   justify-content: center;
   width: 122px;
-  min-height: 25px;
-  margin-bottom: 1px;
+  min-height: 24px;
+  margin-top: -3px;
+  margin-bottom: 3px;
   color: #B4B4B4;
   background-color: #FFFEFB;
   border-radius: 4px;
