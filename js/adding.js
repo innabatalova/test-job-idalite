@@ -6,17 +6,45 @@ const adding = () => {
   const addBoardPrice = document.querySelector(".price");
   const setForm = document.querySelector(".add-board");
   const addBoardButton = document.querySelector(".add-board__button");
+  const arrNewCards = [];
 
   //добавление карточки при отправке формы
   setForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    let addId = (Math.random() * 10000).toPrecision(4);
+
     const newCard = {
+      id: addId,
       name: addBoardName.value,
       info: addBoardInfo.value,
       link: addBoardLink.value,
       price: addBoardPrice.value,
     };
+
+    //конструктор нового объекта карточки
+    function ItemCard(id, name, info, link, price) {
+      this.id = id;
+      this.name = name;
+      this.info = info;
+      this.link = link;
+      this.price = price;
+    }
+
+    //передача данных в конструктор
+    let newCardsCreator = new ItemCard(
+      newCard.id,
+      newCard.name,
+      newCard.info,
+      newCard.link,
+      newCard.price
+    );
+
+    arrNewCards.push(newCardsCreator);
+    console.log(arrNewCards);
+
+    //сохранение карточки в localStorage
+    localStorage.setItem("arrNewCards", JSON.stringify(arrNewCards));
 
     //отрисовка карточки
     const renderCard = () => {
@@ -43,8 +71,10 @@ const adding = () => {
     setTimeout(function () {
       renderCard();
     }, 300);
-    clearForm();
+    //clearForm();
   });
+
+  console.log(arrNewCards);
 
   //очистка формы после отправки
   const clearForm = () => {
@@ -71,3 +101,12 @@ const adding = () => {
 };
 
 adding();
+
+const addedProductTitle = document.querySelector(".added-product__title");
+
+addedProductTitle.addEventListener("click", () => {
+  if (localStorage.getItem("arrNewCards")) {
+    const i = JSON.parse(localStorage.getItem("arrNewCards"));
+    console.log(i);
+  }
+});
