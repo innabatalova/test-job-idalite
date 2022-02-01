@@ -1,7 +1,11 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   font-family: Source Sans Pro;
   font-style: normal;
+}
+
+body, h1 {
+  margin: 0;
 }
 
 input, textarea {
@@ -18,7 +22,7 @@ a, button {
 }
 
 .container {
-  max-width: calc( 100% - 7em);
+  max-width: calc( 100% - 5em);
   margin: auto;
 }
 
