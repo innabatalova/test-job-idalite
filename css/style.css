@@ -240,7 +240,7 @@ a, button {
 
 .cards-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
   width: 74.5%;
 }
@@ -253,6 +253,8 @@ a, button {
   max-width: 332px;
   min-height: 420px;
   padding-bottom: 24px;
+  margin-right: 12px;
+  margin-left: 12px;
   margin-bottom: 16px;
   color: #3F3F3F;
   background: #FFFEFB;
@@ -337,9 +339,14 @@ a, button {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1497px) {
   .cards-grid {
     justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-grid {
     padding-top: 5px;
   }
   .card {
