@@ -22,7 +22,7 @@ const renderCard = (newCard) => {
         <div class="card__content">
           <h2 class="card__title">${newCard.name}</h2>
           <p class="card__info">${newCard.info}</p>
-          <div class="span card__price">${newCard.price} руб.</div>
+          <span class="card__price">${newCard.price} руб.</span>
         </div>
         <div class="card__basket">
           <img src="image/basket-icon.svg" alt="basket icon" />
@@ -44,11 +44,13 @@ setForm.addEventListener("submit", (e) => {
   //сохранение карточки в массив
   arrNewCards.push(newCard);
   //сохранение карточки в localStorage
-  localStorage.setItem("arrNewCards", JSON.stringify(arrNewCards));
+  setTimeout(function () {
+    localStorage.setItem("arrNewCards", JSON.stringify(arrNewCards));
+  }, 500);
   setTimeout(function () {
     renderCard(newCard);
   }, 300);
-  clearForm();
+  //clearForm();
 });
 
 //очистка формы после отправки
@@ -78,14 +80,13 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//перезапись массива в карточками
+//перезапись массива c карточками
 const arrOverWrit = (a) => {
   const del = JSON.parse(localStorage.getItem("arrNewCards"));
   const delArr = del.filter((element) => {
     return !(element.id == a);
   });
   localStorage.setItem("arrNewCards", JSON.stringify(delArr));
-  console.log(delArr);
 };
 
 //сохранение карточек при перезагрузке страницы
