@@ -26,13 +26,22 @@
             <li
               class="added-product__sorting__item added-product__sorting__item__visible"
             >
+              Сортировать
+            </li>
+            <li class="added-product__sorting__item sort-random">
               По умолчанию
             </li>
 
-            <li class="added-product__sorting__item">По цене min</li>
+            <li class="added-product__sorting__item sort-min-max">
+              По цене min
+            </li>
 
-            <li class="added-product__sorting__item">По цене max</li>
-            <li class="added-product__sorting__item">По наименованию</li>
+            <li class="added-product__sorting__item sort-max-min">
+              По цене max
+            </li>
+            <li class="added-product__sorting__item sort-name">
+              По наименованию
+            </li>
           </ul>
           <!-- /.added-product__sorting -->
         </div>
@@ -81,7 +90,7 @@
             <button class="add-board__button" disabled>Добавить товар</button>
           </form>
           <div class="cards-grid">
-            <div class="card" id="1111">
+            <div id="1111" class="card">
               <img
                 src="image/card_image.jpg"
                 alt="card image"
