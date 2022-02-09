@@ -50,7 +50,7 @@ setForm.addEventListener("submit", (e) => {
   setTimeout(function () {
     renderCard(newCard);
   }, 300);
-  //clearForm();
+  clearForm();
 });
 
 //очистка формы после отправки
