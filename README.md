@@ -1,7 +1,7 @@
 # Added product cards
 
 Верстка интерфейса адаптивная. Пользователь может добавлять через интерфейс собственные карточки товаров, удалять их, сортировать по различных характеристикам.
-Посмотреть сейчас https://delicate-banoffee-1920b2.netlify.app/
+Посмотреть сейчас https://endearing-bavarois-6041f2.netlify.app/
 
 # Technologies used
 
@@ -15,4 +15,4 @@
 Запустить компиляцию sass. Запустить на локальном сервере.
 
 # Link to deploy
-https://delicate-banoffee-1920b2.netlify.app/
+https://endearing-bavarois-6041f2.netlify.app/
