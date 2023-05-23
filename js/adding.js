@@ -5,7 +5,6 @@ const addBoardLink = document.querySelector(".link");
 const addBoardPrice = document.querySelector(".price");
 const setForm = document.querySelector(".add-board");
 const addBoardButton = document.querySelector(".add-board__button");
-const arrNewCards = [];
 
 //отрисовка карточки
 const renderCard = (newCard) => {
@@ -41,11 +40,12 @@ setForm.addEventListener("submit", (e) => {
     link: addBoardLink.value,
     price: addBoardPrice.value,
   };
+  const del = JSON.parse(localStorage.getItem("arrNewCards"));
   //сохранение карточки в массив
-  arrNewCards.push(newCard);
+  del.push(newCard);
   //сохранение карточки в localStorage
   setTimeout(function () {
-    localStorage.setItem("arrNewCards", JSON.stringify(arrNewCards));
+    localStorage.setItem("arrNewCards", JSON.stringify(del));
   }, 500);
   setTimeout(function () {
     renderCard(newCard);

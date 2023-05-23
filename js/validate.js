@@ -78,14 +78,6 @@ const validate = () => {
       linkField.parentElement.append(error);
     }
 
-    if (linkField.value.length > 100) {
-      linkField.classList.add("add-inval");
-      let error = document.createElement("div");
-      error.className = "error";
-      error.innerHTML = "Макс количество символов: 100";
-      addBoardButton.classList.remove("add-board__button_create");
-      linkField.parentElement.append(error);
-    }
   });
 
   priceField.addEventListener("input", () => {
