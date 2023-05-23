@@ -5,10 +5,13 @@
 
 # Technologies used
 
--HTML
--SASS
--localStorage in Window
--native JS
+ -HTML      
+ 
+ -SASS
+ 
+ -localStorage in Window
+ 
+ -native JS
 
 # Install and start
 
